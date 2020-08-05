@@ -1,0 +1,17 @@
+<div class="row animated fadeIn">
+    <div class="col-md-4">
+        <img [src]= heroe.img [alt]= heroe.nombre width="350" height="350"/>
+        <button [routerLink] = "['/heroes']" class="btn btn-outline-danger btn-block" style="margin-top: 20px;">
+            Back
+        </button>
+    </div>
+    <div class="col-md-8">
+        <p>
+            {{ heroe.bio }}
+        </p>
+        <div>
+            <img *ngIf = "heroe.casa == 'Marvel'" src="assets/img/marvel.png" alt="Marvel" width="100" height="60">
+            <img *ngIf = "heroe.casa == 'DC'" src="assets/img/dc.png" alt="DC" width="120" height="100">
+        </div>
+    </div>
+</div>
